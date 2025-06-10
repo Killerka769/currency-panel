@@ -1,0 +1,44 @@
+@use './mixins' as *;
+main {
+    @include flex-cont(column, nowrap, center, center, 2rem);
+    padding: 110px 2rem 2rem; // учитываем высоту header (90px)
+    background-color: #222;
+    color: white;
+    width: 100%;
+    min-height: calc(100vh - 90px);
+  
+    .containerCurrencies {
+      @include flex-cont(row, wrap, flex-start, center, 1rem);
+      width: 100%;
+      max-width: 1200px;
+  
+      ul {
+        @include flex-cont(row, wrap, flex-start, center, 1rem);
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+  
+        li {
+          display: inline-block;
+          padding: 1rem;
+          border: 2px solid white;
+          background-color: #333;
+          border-radius: 8px;
+          min-width: 120px;
+          text-align: center;
+          word-wrap: break-word;
+          cursor: pointer;
+          transition: 0.3s;
+        
+          &:hover {
+            transform: scale(1.05);
+            background-color: #444;
+          }
+        }
+      }
+    }
+  }
+  
+  
+  

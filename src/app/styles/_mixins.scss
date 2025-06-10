@@ -1,0 +1,8 @@
+@mixin flex-cont($a : row, $b : nowrap, $c : center, $d : center, $e : 0px) {
+    display: flex;
+    flex-direction: $a;
+    flex-wrap: $b;
+    align-items: $c;
+    justify-content: $d;
+    gap: $e;
+}

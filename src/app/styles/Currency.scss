@@ -1,0 +1,5 @@
+@use './mixins' as *;
+main {
+    @include flex-cont(column,nowrap,_,_,0.5rem);
+    height: auto;
+}

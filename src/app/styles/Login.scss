@@ -1,0 +1,68 @@
+@use './mixins' as *;
+main {
+    @include flex-cont(row,nowrap,center,center,0px);
+    height: 88vh;
+    overflow: hidden;
+    background-color: #222;
+
+    .containerLogin {
+        @include flex-cont(row,nowrap,center,center,0px);
+        width: 40%;
+        height: 65vh;
+        border: 1px solid #fff;
+        background-color: white;
+        border-radius: 0.5rem;
+        transition: 0.5s filter;
+        @media screen and (max-width:1050px) {
+            height: 55vh;
+        }
+        @media screen and (max-width:700px) {
+            width: 60%;
+        }
+        @media screen and (max-width:550px) {
+            height: 45vh;
+        }
+        &:hover {
+            filter: drop-shadow(0 0 10px white);
+        }
+        &:focus-within {
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+        }
+
+        form {
+            @include flex-cont(column,nowrap,flex-start,center,1rem);
+
+            label {
+                font-size: 36px;
+                color: black;
+                @media screen and (max-width:1050px) {
+                   font-size: 28px;
+                }
+                @media screen and (max-width:700px) {
+                    font-size: 22px;
+                }
+            }
+            input {
+                width: 300px;
+                height: 40px;
+                font-size: 28px;
+                @media screen and (max-width:1050px) {
+                    width: 200px;
+                    font-size: 22px;
+                    height: 30px;
+                }
+                @media screen and (max-width:700px) {
+                    width: 150px;
+                    font-size: 16px;
+                }
+                @media screen and (max-width:550px) {
+                    width: 130px;
+                    font-size: 14px;
+                }
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
