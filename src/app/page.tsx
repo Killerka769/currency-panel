@@ -23,7 +23,7 @@ export default function Home() {
               <li key={code}>
                 <Link href={'/currency/' + code}>
                 <h3>{code}</h3>
-                <p>{name}</p>
+                <p>{name as string}</p>
                 </Link>
               </li>
             ))}

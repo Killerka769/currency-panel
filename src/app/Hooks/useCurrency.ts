@@ -2,12 +2,12 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 // Тип для объекта курсов валют, где ключ — код валюты, значение — курс
-interface CurrencyRates {
+export interface CurrencyRates {
   [key: string]: number;
 }
 
 // Тип для данных, которые возвращает API о валюте
-interface CurrencyInfo {
+export interface CurrencyInfo {
   amount: number;     // Кол-во базовой валюты (обычно 1)
   base: string;       // Базовая валюта, от которой считаются курсы
   date: string;       // Дата актуальности курсов
@@ -28,7 +28,6 @@ const useCurrency = (code: string) => {
     queryFn: () => fetchCurrencyInfo(code), // Функция для получения данных
     enabled: !!code,                        // Запрос запускается только если есть валидный код валюты
     staleTime: 1000 * 60 * 5,               // Время в миллисекундах, пока данные считаются свежими (5 минут)
-    cacheTime: 1000 * 60 * 10,              // Время хранения кеша (10 минут)
     refetchOnWindowFocus: false,             // Отключаем автоматический рефетч при фокусе окна
   });
 

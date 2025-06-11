@@ -1,11 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/currency-panel',
   images: {
     unoptimized: true,
   },
+  basePath: '/currency-panel',
+  assetPrefix: '/currency-panel/',
 };
 
-module.exports = nextConfig;
-
+export default nextConfig;
