@@ -5,8 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/currency-panel',
-  assetPrefix: '/currency-panel/',
 };
 
 export default nextConfig;
