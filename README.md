@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Currency Panel
 
-## Getting Started
+💱 **Currency Panel** — панель обменных курсов в реальном времени 🚀
 
-First, run the development server:
+## Описание  
+Currency Panel — это современное Next.js-приложение для просмотра курса популярных валют.  
+Проект полностью на TypeScript, с использованием React Query и Zustand, а стили оформлены через SASS для удобства и гибкости.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Данные валют обновляются в реальном времени, загружаются динамически, а интерфейс адаптивный и плавный.  
+Для защиты приватных маршрутов реализован компонент `ProtectedRoute`, который проверяет наличие токена в Zustand и перенаправляет неавторизованных пользователей на страницу логина. Пока состояние загружается, показывается индикатор загрузки.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Технологии и фишки
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Технология            | Использование                           |
+|-----------------------|---------------------------------------|
+| 🖼️ Next.js (App Router) | SSR + Static Export + роутинг с защитой маршрутизации через `ProtectedRoute` |
+| 🌀 TypeScript          | Строгая типизация                     |
+| 🎨 Sass                | Стили и анимации                      |
+| ⚡ Zustand             | Глобальное состояние (токен)          |
+| 🔁 React Query         | Получение и кеширование данных        |
+| 📦 Vercel              | Автодеплой и хостинг                  |
+| 🔧 Git + GitHub        | Контроль версий                       |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Что умеет приложение:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🔄 Получение курса валют (USD, EUR, и др.)  
+- 🧭 Динамические страницы под каждую валюту (`/currency/USD`) с валидацией параметров и защитой приватных маршрутов  
+- 📱 Адаптивность под смартфоны и десктопы  
+- 💨 Быстрая загрузка и статика через `output: export`  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Как запустить локально
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    git clone https://github.com/Killerka769/currency-panel.git
+    cd currency-panel
+    npm install
+    npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 Деплой
+
+Проект деплоен на Vercel  
+🔗 [https://currency-panel-xi.vercel.app/](https://currency-panel-xi.vercel.app/)
