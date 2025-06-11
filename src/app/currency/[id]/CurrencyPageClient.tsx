@@ -6,6 +6,7 @@ import useCurrency from '@/app/Hooks/useCurrency';
 import Link from 'next/link';
 import '../../styles/Currency.scss';
 import { notFound } from 'next/navigation';
+import ProtectedRoute from '@/app/components/ProtectedRoute';
 
 interface CurrencyPageClientProps {
   id: string;
@@ -25,6 +26,7 @@ export default function CurrencyPageClient({ id }: CurrencyPageClientProps) {
 
   return (
     <>
+      <ProtectedRoute>
       <Header />
       <main>
         <h1>Курс 1 {dataCurrency.base} на {dataCurrency.date}</h1>
@@ -37,6 +39,7 @@ export default function CurrencyPageClient({ id }: CurrencyPageClientProps) {
         </ul>
         <Link href="/"><button>Назад</button></Link>
       </main>
+      </ProtectedRoute>
     </>
   );
 }
