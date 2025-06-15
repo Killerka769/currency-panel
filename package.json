@@ -5,11 +5,9 @@
   "homepage": "https://github.com/Killerka769/currency-panel",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
-    "deploy": "gh-pages -d out"
+    "build": "next build"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.80.6",
