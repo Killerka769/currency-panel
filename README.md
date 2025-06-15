@@ -63,4 +63,4 @@
 ## 📦 Деплой
 
 Проект деплоен на Vercel  
-🔗 [https://currency-panel-xi.vercel.app/](https://currency-panel-xi.vercel.app/)
+🔗 [currency-panel-xi.vercel.app](currency-panel-xi.vercel.app)
